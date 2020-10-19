@@ -1,0 +1,39 @@
+version: "2.0"
+
+stories:
+
+- story: welcome
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: bot_info
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_happy
+
+- story: corona_faq
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: corona_intro
+  - intent: utter_corona_intro
+  - intent: corona_spread
+  - action: utter_corona_spread
+  - intent: corona_food_spread
+  - action: utter_corona_food_spread
+
+- story: weather_vulnerable
+  steps:
+    - intent: warm_weather
+    - action: utter_warm_weather
+    - intent: high_risk
+    - action: utter_high_risk
+
+
